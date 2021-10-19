@@ -1,1 +1,0 @@
-# ShockSoc.github.io
