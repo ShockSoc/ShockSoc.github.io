@@ -1,0 +1,43 @@
+from flask import Blueprint, Response, render_template, url_for
+
+import os
+from os import path
+import re
+from datetime import date, datetime, timezone
+from operator import attrgetter, itemgetter
+
+import jinja2
+
+ROOT_DIR = path.abspath(path.join(path.dirname(__file__), path.pardir))
+TEMPLATE_DIR = path.join(ROOT_DIR, "templates")
+# dirname(__file__) is the hacksoc_org python module folder
+# its parent is the git repository root, directly under which the static/, and template/ folders lie
+
+blueprint = Blueprint(
+    "routes",
+    __name__,
+    template_folder=None,
+    static_folder=path.join(ROOT_DIR, "static"),
+    static_url_path="/static",
+)
+
+blueprint.jinja_loader = jinja2.ChoiceLoader(
+    [
+        FileSystemLoader(TEMPLATE_DIR),
+        MarkdownNewsLoader(TEMPLATE_DIR, prefix_allow=os.path.join("content", "news")),
+        MarkdownServerLoader(TEMPLATE_DIR, prefix_allow=os.path.join("content", "servers")),
+    ]
+)
+
+
+@blueprint.route("/<string:page>.html")
+def render_page(page: str):
+    """Renders a simple page, with no additional context passed.
+    Serves `content/foo.html.jinja2` at `/foo.html`
+    Args:
+        page (str): name of the page (with no extension)
+    Returns:
+        str: Full HTML page
+    """
+    return render_template(f"content/{page}.html.jinja2")
+

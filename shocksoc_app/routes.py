@@ -1,0 +1,45 @@
+from flask import Blueprint, Response, render_template, url_for
+import os
+from flask import Blueprint, Response, render_template, url_for
+from jinja2 import FileSystemLoader
+
+from shocksoc_app.custom_loaders import CustomLoader
+
+ROOT_DIR = path.abspath(path.join(path.dirname(__file__), '..'))
+TEMPLATE_DIR = path.join(ROOT_DIR, "templates")
+
+blueprint = Blueprint(
+    "routes",
+    __name__,
+    static_folder=path.join(ROOT_DIR, "static"),
+    static_url_path="/static",
+)
+
+
+blueprint.jinja_loader = jinja2.ChoiceLoader(
+    [
+        FileSystemLoader(TEMPLATE_DIR),
+        CustomLoader(TEMPLATE_DIR, prefix_allow="*"),
+    ]
+)
+
+
+@blueprint.route("/<string:page>.html")
+def render_page(page: str):
+    """Renders a simple page.
+    Serves `pages/foo.html.jinja2` at `/foo.html`
+    Args:
+        page (str): name of the page (with no extension)
+    Returns:
+        str: HTML
+    """
+    return render_template(f"pages/{page}.html.jinja2")
+
+
+@blueprint.route("/")
+def index():
+    """Handles / serving index.html
+    Returns:
+        str: Full HTML page
+    """
+    return render_page("index")
