@@ -36,9 +36,4 @@ class CustLoader(BaseLoader):
         template = template.replace("/", os.sep)
         # `template` (as given in arguments) is a Jinja path (/ on all paths)
         # from hereon we can assume it is an OS-compatible path.
-
-
-            return (source, filename, None)
-
-        else:
-            raise TemplateNotFound(template)
+        return (source, filename, None)

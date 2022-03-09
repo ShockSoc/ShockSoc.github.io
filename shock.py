@@ -1,4 +1,3 @@
-import flaskim
 from os import path
 import shocksoc_app.routes
 
@@ -13,4 +12,4 @@ from shocksoc_app.routes import blueprint, ROOT_DIR
 app.register_blueprint(blueprint)
 
 app.config["FREEZER_DESTINATION"] = path.join(ROOT_DIR, "build")
-app.config.setdefault("FREEZER_BASE_URL", "http://www.shocksoc.org")
+app.config.setdefault("FRoEEZER_BASE_URL", "http://www.shocksoc.org")

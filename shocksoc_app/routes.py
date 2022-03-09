@@ -1,9 +1,11 @@
 from flask import Blueprint, Response, render_template, url_for
 import os
+from os import path
 from flask import Blueprint, Response, render_template, url_for
+import jinja2
 from jinja2 import FileSystemLoader
 
-from shocksoc_app.custom_loaders import CustomLoader
+#from shocksoc_app.custom_loaders import CustomLoader
 
 ROOT_DIR = path.abspath(path.join(path.dirname(__file__), '..'))
 TEMPLATE_DIR = path.join(ROOT_DIR, "templates")
@@ -19,7 +21,7 @@ blueprint = Blueprint(
 blueprint.jinja_loader = jinja2.ChoiceLoader(
     [
         FileSystemLoader(TEMPLATE_DIR),
-        CustomLoader(TEMPLATE_DIR, prefix_allow="*"),
+        #CustomLoader(TEMPLATE_DIR, prefix_allow="*"),
     ]
 )
 
