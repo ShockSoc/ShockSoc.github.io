@@ -62,9 +62,47 @@ nav ul li {
     color: black;
     font-weight: 100;
     font-size: 30px;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+    margin: 20px;
+    border: 5px solid black; 
+    box-shadow: 5px 5px 2px darkslategray;
+    transition: 0.5s;
+    text-decoration: none;
+    position: relative;
+    
+}
+.link_tile:hover{
+    background-color: whitesmoke;
+    color: whitesmoke;
+}
+.link_image {
+    height: 65%;
+    margin: 10px;
+}
+.link_name{
+    background-color: black;
+    width: 100%;
+    color: lightgray;
+    padding: 0;
+    margin:0;
+    position: absolute; bottom: 0;
+    font-style: italic;
+}
+
+.eventbox{
+    width: 70%;
+    height: auto;
+    color: black;
+    font-weight: 100;
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-color: lightgray;
     margin: 10px;
@@ -74,4 +112,14 @@ nav ul li {
     box-shadow: 5px 5px 2px darkslategray;
     transition: 0.5s;
     text-decoration: none;
+}
+.eventbox h2{
+    text-decoration: underline;
+}
+.eventloc{
+    background-color: black;
+    width: 100%;
+    color: lightgray;
+    padding-top: 10px;
+    font-style: italic;
 }

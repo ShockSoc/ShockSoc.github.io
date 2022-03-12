@@ -1,0 +1,9 @@
+<div class="event">
+  <h2>{% block itemblock %}{% endblock itemblock %}</h2>
+  <p>We have a stall at ReFreshers fair in the Exhibition Centre</p>
+
+  <div class="locbox">
+    Where: Physics Exhibition Centre<br>
+    When: 15/1/2022 10:00-15:00
+  </div>
+</div>

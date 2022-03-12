@@ -1,0 +1,8 @@
+{% macro item(name) -%}
+  <div class="link_tile">
+    <img class="link_image" src="static/{{name}}.png" alt="{{name}}">
+    <div class="link_name">
+      {{name}}
+    </div>
+  </div>
+{%- endmacro %}

@@ -10,16 +10,14 @@
 ]
 %}
 
+{% import "container_box.html.jinja2" as boxes %}
 {% block title %}Home{% endblock title %}
 {% block headblock %}<div id="logo_div"><img src="static/logo_new.png" alt="ShockSoc Logo" id="logo"/></div>{% endblock headblock %}
 {% block body %}
   <div class="link_container">
     {% for item in links %}
       <a href="{{ item[0] }}">
-	<div class="link_tile">
-	  <img src="static/{{ item[1] }}.png" alt="{{ item[1] }}" width=70%>
-	  <br>{{ item[1] }}
-	</div>
+	{{boxes.item(item[1])}}
       </a>
     {% endfor %}
   </div>

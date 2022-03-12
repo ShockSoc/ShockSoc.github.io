@@ -1,0 +1,10 @@
+{% macro event(title, content, where, date, start, end) -%}
+  <div class="eventbox">
+    <h2>{{title}}</h2>
+    <p>{{content}}</p>
+    <div class="eventloc">
+      Where: <a href="https://www.york.ac.uk/campusservices/avcentre/room/room.cfm?roomSC={{where|replace("/","_")}}">{{where}}</a><br>
+      When:  {{ date }} {{start}}-{{ end }}
+    </div>
+  </div>
+{%- endmacro %}
