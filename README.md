@@ -21,4 +21,4 @@ To run a local development server, run `python3 shock.py`, and a server will be 
 To generate a static site with Frozen-Flask, run `python3 shock.py build`, and the files will be placed in the "build" directory.
 
 ### Deploying ###
-Deployment is through a Github Action on push to `master`, which runs `deploy.sh` to build the site then push the built files to the "gh-deploy" branch. 
+Deployment is through a Github Action on push to `master`, which runs `deploy.sh` to build the site then push the built files to the `gh-deploy` branch. 
