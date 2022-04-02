@@ -1,5 +1,12 @@
 # README #
 
+This repo contains the source for [shocksoc.org](http://www.shocksoc.org).
+
+It uses Flask with Jinja2 for templating.
+
+## Contributing ##
+
+
 ## Local Development ##
 To edit and run locally, you will require a recent version of Python 3 and pip.
 
