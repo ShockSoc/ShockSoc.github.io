@@ -1,5 +1,6 @@
 import flask
 import json
+from datetime import datetime
 from os import path
 import shocksoc_app.routes
 
@@ -20,7 +21,12 @@ with open("links_list.json", 'r') as f:
     links_json_b = f.read()
     main_links = json.loads(links_json_b)
 
-    
+@app.context_processor
+def inject_date():
+    now = datetime.now()
+    # dd/mm/YY H:M:S
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+    return dict(date_time_now = dt_string)    
 
 @app.context_processor
 def inject_events():
