@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-repo_uri="https://x-access-token:${ACCESS_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+repo_uri="https://x-access-token:${ACCESS_TOKEN}@github.com/ShockSoc/ShockSoc.github.io.git"
 remote_name="origin"
 
 pip install -r requirements.txt
@@ -11,7 +11,7 @@ python3 shock.py build
 cd build/
 # create a fresh new git repo in the output directory
 git init
-git switch master
+git checkout -b master
 git add -A
 git commit -m 'deploy'
 
