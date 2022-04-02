@@ -1,0 +1,130 @@
+body {
+    text-align: center;
+    font-size: 14px;
+    font-family: sans-serif;
+    padding: 0; margin: 0;
+}
+header {
+    display: inline-block;
+    width:100%;
+    text-align: center;
+}
+#logo {
+    height: 250px;
+    width: 250px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    float: right;
+    height: 60px;
+    line-height: 50px;
+    text-align: left;
+    background-color: black;
+    color: snow;
+    width: 100%;
+}
+
+nav ul{
+    font-size: 20px;
+    list-style-type: none;
+}
+nav ul li {
+    padding-left: 0;
+    padding-right: 3em;
+    float: left;
+}
+#navspan {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.link_container{
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 50%;
+    width: 80%;
+    text-decoration: none;
+}
+.link_container a {
+    text-decoration: none;
+}
+.link_tile{
+    width: 200px;
+    height: 200px;
+    color: black;
+    font-weight: 100;
+    font-size: 30px;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+    margin: 20px;
+    border: 5px solid black; 
+    box-shadow: 5px 5px 2px darkslategray;
+    transition: 0.5s;
+    text-decoration: none;
+    position: relative;
+    
+}
+.link_tile:hover{
+    background-color: whitesmoke;
+    color: whitesmoke;
+}
+.link_image {
+    height: 65%;
+    margin: 10px;
+}
+.link_name{
+    background-color: black;
+    width: 100%;
+    color: lightgray;
+    padding: 0;
+    margin:0;
+    position: absolute; bottom: 0;
+    font-style: italic;
+}
+
+.eventbox{
+    width: 70%;
+    height: auto;
+    color: black;
+    font-weight: 100;
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgray;
+    margin: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 5px solid black; 
+    box-shadow: 5px 5px 2px darkslategray;
+    transition: 0.5s;
+    text-decoration: none;
+}
+.eventbox h2{
+    text-decoration: underline;
+}
+
+.eventbox img {
+    max-height: 400px;
+    max-width: 95%;
+}
+.eventloc{
+    background-color: black;
+    width: 100%;
+    color: lightgray;
+    padding-top: 10px;
+    font-style: italic;
+}

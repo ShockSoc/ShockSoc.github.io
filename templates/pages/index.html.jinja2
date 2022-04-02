@@ -15,9 +15,9 @@
 {% block headblock %}<div id="logo_div"><img src="static/logo_new.png" alt="ShockSoc Logo" id="logo"/></div>{% endblock headblock %}
 {% block body %}
   <div class="link_container">
-    {% for item in links %}
-      <a href="{{ item[0] }}">
-	{{boxes.item(item[1])}}
+    {% for link in main_links_dict %}
+      <a href="{{ link.url }}">
+	{{boxes.item(link.name, link.icon)}}
       </a>
     {% endfor %}
   </div>

@@ -5,8 +5,6 @@ from flask import Blueprint, Response, render_template, url_for
 import jinja2
 from jinja2 import FileSystemLoader
 
-#from shocksoc_app.custom_loaders import CustomLoader
-
 ROOT_DIR = path.abspath(path.join(path.dirname(__file__), '..'))
 TEMPLATE_DIR = path.join(ROOT_DIR, "templates")
 
@@ -27,7 +25,7 @@ blueprint.jinja_loader = jinja2.ChoiceLoader(
 
 
 @blueprint.route("/<string:page>.html")
-def render_page(page: str):
+def render_top_page(page: str):
     """Renders a simple page.
     Serves `pages/foo.html.jinja2` at `/foo.html`
     Args:
@@ -37,6 +35,17 @@ def render_page(page: str):
     """
     return render_template(f"pages/{page}.html.jinja2")
 
+@blueprint.route("/projects/<string:page>.html")
+def render_project_page(page: str):
+    """Renders an event page.
+    Serves `pages/events/foo.html.jinja2` at `/events/foo.html`
+    Args:
+        page (str): name of the page (with no extension)
+    Returns:
+        str: HTML
+    """
+    return render_template(f"pages/projects/{page}.html.jinja2")
+
 
 @blueprint.route("/")
 def index():
@@ -44,4 +53,4 @@ def index():
     Returns:
         str: Full HTML page
     """
-    return render_page("index")
+    return render_top_page("index")

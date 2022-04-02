@@ -116,6 +116,11 @@ nav ul li {
 .eventbox h2{
     text-decoration: underline;
 }
+
+.eventbox img {
+    max-height: 400px;
+    max-width: 95%;
+}
 .eventloc{
     background-color: black;
     width: 100%;

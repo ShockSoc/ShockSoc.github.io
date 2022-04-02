@@ -1,0 +1,44 @@
+{
+    "links" : [
+	{
+	    "url" : "https://yusu.org/activities/view/shocksoc",
+	    "name" : "YUSU",
+	    "icon" : "static/YUSU.png"
+	},
+	{
+	    "url" : "https://discord.gg/UYZNqjxAvR",
+	    "name" : "Discord",
+	    "icon" : "static/Discord.png"
+	},
+	{
+	    "url" : "events.html",
+	    "name" : "Events",
+	    "icon" : "static/Events.png"
+	},
+	{
+	    "url" : "https://twitter.com/uoy_shocksoc",
+	    "name" : "Twitter",
+	    "icon" : "static/Twitter.png"
+	},
+	{
+	    "url" : "https://www.instagram.com/uoy_shocksoc/",
+	    "name" : "Instagram",
+	    "icon" : "static/Instagram.png"
+	},
+	{
+	    "url" : "https://github.com/ShockSoc",
+	    "name" : "GitHub",
+	    "icon" : "static/GitHub.png"
+	},
+	{
+	    "url" : "https://docs.google.com/forms/d/e/1FAIpQLScVPY7lTE0IHa_7mWGx_MjNMhBXkWMKHFZOogkZxwMHd91v9g/viewform?usp=sf_link",
+	    "name" : "Membership",
+	    "icon" : "static/Membership.png"
+	},
+	{
+	    "url" : "mailto:shocksoc@yusu.org",
+	    "name" : "e-mail",
+	    "icon" : "static/e-mail.png"
+	}
+    ]
+}

@@ -10,8 +10,8 @@
 {% block body %}
   
   <div class="link_container">
-    {% for event in events %}
-      {{ boxes.event(event[0], event[1], event[2], event[3], event[4], event[5]) }}
+    {% for event in ev_dict %}
+      {{ boxes.event(event.name, event.description, event.image, event.form, event.location, event.date, event.start_time, event.end_time) }}
       {% endfor %}
      </div>
 {% endblock body %}

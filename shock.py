@@ -1,15 +1,12 @@
 from os import path
-import shocksoc_app.routes
+from shocksoc_app.app import app
+from shocksoc_app.freeze import freezer
+import os, fnmatch, sys
 
-import flask
-from os import path
 
-app = flask.Flask(__name__, static_folder=None, template_folder=None)
-app.config["TEMPLATES_AUTO_RELOAD"] = True
 
-from shocksoc_app.routes import blueprint, ROOT_DIR
-
-app.register_blueprint(blueprint)
-
-app.config["FREEZER_DESTINATION"] = path.join(ROOT_DIR, "build")
-app.config.setdefault("FRoEEZER_BASE_URL", "http://www.shocksoc.org")
+if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "build":
+        freezer.freeze()
+    else:
+        app.run(debug=True)
