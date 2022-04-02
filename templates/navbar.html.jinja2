@@ -1,0 +1,13 @@
+{% set navigation =
+[('index.html', 'Home'),
+('about.html', 'About'),
+('events.html','Events')
+]
+%}
+<nav id="std_nav">
+  <span id="navspan"><ul>
+    {% for item in navigation %}
+      <li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
+    {% endfor %}
+  </ul></span>
+</nav>

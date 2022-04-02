@@ -1,0 +1,18 @@
+{% macro event(title, content, image_url, form_url, where, date, start, end) -%}
+  <div class="eventbox">
+    <h2>{{title}}</h2>
+    <p>{{content}}
+    {% if form_url != '' %}
+      <br><a href="{{form_url}}">Sign-up Here</a>
+    {% endif %}
+    </p>
+    {% if image_url != '' %}
+      <img src="{{image_url}}" alt="{{title}} illustration">
+    {% endif %}
+    <div class="eventloc">
+      Where: {{where}}<!-- <a href="https://www.york.ac.uk/campusservices/avcentre/room/room.cfm?roomSC={{where|replace("/","_")}}">{{where}}</a>--> <br>
+      When:  {{ date }} {{start}}-{{ end }}
+    </div>
+  </div>
+{%- endmacro %}
+
