@@ -11,6 +11,8 @@ python3 shock.py build
 cd build/
 # create a fresh new git repo in the output directory
 git init
+git config user.name "$GITHUB_ACTOR"
+git config user.email "${GITHUB_ACTOR}@bots.github.com"
 git checkout -b master
 git add -A
 git commit -m 'deploy'
