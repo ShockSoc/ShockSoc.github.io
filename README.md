@@ -1,5 +1,7 @@
 # README #
 
+[![Build and Deploy](https://github.com/ShockSoc/ShockSoc.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/ShockSoc/ShockSoc.github.io/actions/workflows/deploy.yml)
+
 This repo contains the source for [shocksoc.org](http://www.shocksoc.org).
 
 It uses Flask with Jinja2 for templating.
