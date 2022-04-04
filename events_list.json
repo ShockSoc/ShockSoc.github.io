@@ -11,6 +11,16 @@
 	    "form" : ""
 	},
 	{
+	    "name" : "AGM - Voting and Pub Afterwards!",
+	    "description" : " AGM Votes to be counted then straight down the pub afterwards for celebration. ",
+	    "date" : "22/04/2022",
+	    "start_time" : "18:45",
+	    "end_time" : "21:00",
+	    "location" : "P/T/005X",
+	    "image" : "",
+	    "form" : ""
+	},
+	{
 	    "name" : "Graduate Careers with MI5, MI6 & GCHQ",
 	    "description" : "Come join us for this insight event where the organisations will be sharing a presentation about what it is like to work for them, their missions and the routes avaliable.",
 	    "date" : "TBC",
