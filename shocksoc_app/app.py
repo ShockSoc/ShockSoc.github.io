@@ -40,6 +40,15 @@ def inject_main_links():
     #print( dict(main_links_dict = main_links["links"]))
     return dict(main_links_dict = main_links["links"])
 
+@app.context_processor
+def inject_basic_about():
+    try:
+        markdown = shocksoc_app.markdown.render_markdown("markdown/about.md")
+        html = markdown['html']
+    except:
+        html = "ShockSoc York.<br> <em>The</em> University Of York Engineering Society."
+    return dict(about_us = html)
+
 def get_fonts(dirname:str) -> list:
     fonts=[]
     for file in os.listdir(dirname):

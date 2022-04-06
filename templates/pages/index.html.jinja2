@@ -4,6 +4,7 @@
 {% block title %}Home{% endblock title %}
 {% block headblock %}<div id="logo_div"></div>{% endblock headblock %}
 {% block body %}
+  <div id="index_about_container">{{about_us}}</div>
   <div class="link_container">
     {% for link in main_links_dict %}
       <a href="{{ link.url }}">

@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    font-size: 14px;
+    font-size: 1.5rem;
     font-family: Raleway-Light;
     padding: 0; margin: 0;
     background: black;
@@ -34,6 +34,12 @@ nav ul{
 nav ul li {
     padding-left: 35px;
     padding-right: 0;
+    text-decoration: none;
+    transition: all .5s ease-in;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
 }
 
 #navlogo{
