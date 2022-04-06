@@ -14,14 +14,14 @@ header a {
 
 .link_container {
     background: whitesmoke;
-    box-shadow: darkslategray;
+    box-shadow: 5px 5px 2px slategray;
 }
 
 .link_tile{
     background-color: lightgray;
     color: black;
     border-color: black;
-    box-shadow:  darkslategray;
+    box-shadow:  5px 5px 2px darkslategray;
 }
 
 .link_tile:hover{
@@ -38,7 +38,7 @@ header a {
     color: black;
     background-color: lightgray;
     border-color:  black;
-    box-shadow:  darkslategray;
+    box-shadow: 5px 5px 2px  darkslategray;
 }
 
 .eventloc{
