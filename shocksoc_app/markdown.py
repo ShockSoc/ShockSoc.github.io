@@ -29,6 +29,7 @@ def render_dir(dirname:str) -> list:
            md_lst.append(render_markdown(os.path.join(dirname, filename)))
     return md_lst
 
+events = render_dir("markdown/events")
 try:
     events = render_dir("markdown/events")
 except:
