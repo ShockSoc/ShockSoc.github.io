@@ -10,11 +10,11 @@ header a {
 .std_nav {
     background-color: black;
     color: snow;
+    box-shadow: 0px 0px 5px darkslategray;
 }
 
 .link_container {
     background: whitesmoke;
-    box-shadow: 0px 0px 5px slategray;
 }
 
 .link_tile{
