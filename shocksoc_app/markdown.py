@@ -7,8 +7,8 @@ md_dirs=["markdown/events/", "markdown/projects"]
 #Used in sorting
 def get_md_date(md:dict):
     #Get the datetime for the event
-    print(md['meta']['date'][0])
     try:
+        print(md['meta']['date'][0])
         date = datetime.datetime.strptime(md['meta']['date'][0], "%d/%m/%Y").date()
     except:
         date = datetime.date.today() + datetime.timedelta(days=1)
@@ -28,8 +28,11 @@ def render_dir(dirname:str) -> list:
         if filename.endswith(".md"):
            md_lst.append(render_markdown(os.path.join(dirname, filename)))
     return md_lst
-            
-events = render_dir("markdown/events")
+
+try:
+    events = render_dir("markdown/events")
+except:
+    print("Error rendering events dir")
 
 future_events = [ev for ev in events if get_md_date(ev) >= datetime.date.today()]
 past_events = [ev for ev in events if get_md_date(ev) < datetime.date.today()]
@@ -42,5 +45,9 @@ print(future_events)
 print("past: ")
 print(past_events)
 
-projects = render_dir(md_dirs[1])
+try:
+    projects = render_dir(md_dirs[1])
+except:
+    print("Error rendering projects dir")
+
 sorted_projects = sorted(projects, key=lambda project: get_md_date(project))
