@@ -3,6 +3,9 @@ body {
     font-size: 1.5rem;
     font-family: Raleway-Light;
     padding: 0; margin: 0;
+    display: grid;
+    min-height: 100vh; 
+    grid-template-rows: auto 1fr auto;
 }
 header {
     display: inline-block;
@@ -10,7 +13,15 @@ header {
     text-align: center;
 }
 
-h1 {
+footer {
+    font-size: 0.8rem;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: whitesmoke;
+}
+
+h1, h2 {
     text-decoration: underline;
 }
 
@@ -25,7 +36,11 @@ h1 {
 #index_about_container{
     width: 80%;
     margin: auto;
-    min-height: 100%;
+}
+
+#about_container{
+    width: 80%;
+    margin: auto;
 }
 
 nav ul{

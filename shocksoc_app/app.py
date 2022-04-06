@@ -41,6 +41,21 @@ def inject_main_links():
     return dict(main_links_dict = main_links["links"])
 
 @app.context_processor
+def inject_about():
+    try:
+        markdown = shocksoc_app.markdown.render_markdown("markdown/home_about.md")
+        home_html = markdown['html']
+    except:
+        home_html = ""
+    try:
+        markdown = shocksoc_app.markdown.render_markdown("markdown/about.md")
+        about_html = markdown['html']
+    except:
+         about_html = "ShockSoc York.<br> <em>The</em> University Of York Engineering Society."
+        
+    return dict(about = about_html, home_about = home_html)
+
+@app.context_processor
 def inject_basic_about():
     try:
         markdown = shocksoc_app.markdown.render_markdown("markdown/about.md")

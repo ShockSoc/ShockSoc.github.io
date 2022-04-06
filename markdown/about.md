@@ -1,13 +1,22 @@
-
-##### _Do you have an interest in Engineering?_
-#### _Do you want to get involved with hands-on projects and challenges?_
-### _Do you want to be part of one of the biggest societies at the University of York?_
-## Yes, Yes and Yes? _Then ShockSoc is for you!_
-
-Our mission is to help students who are interested in electronics and engineering to expand their knowledge and skills whilst socialising and interacting with like minded people.
+## Who We Are
+We are _the_ Electronics and Engineering society at the University of York.
 
 We run a variety of regular events, including:
 
-### - Weekly lab sessions 
-### - Social events
-### - Projects & challenges
+- Weekly lab sessions 
+- Social events
+- Projects & challenges
+
+## Our Committee 
+
+### President
+
+### Secretary
+
+### Treasurer
+
+### Social Secretary
+
+### Press and Publicity
+
+
