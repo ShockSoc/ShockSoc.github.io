@@ -178,6 +178,10 @@ nav ul li {
     text-decoration: underline;
 }
 
+.eventbox p, h2 {
+    max-width: 90%;
+}
+
 .eventbox img {
     max-height: 400px;
     max-width: 95%;
