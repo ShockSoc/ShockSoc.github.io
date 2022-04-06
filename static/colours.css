@@ -1,5 +1,5 @@
 body {
-    background-color: lightgreen;
+    background-color: whitesmoke;
 }
 
 header a {
@@ -14,7 +14,7 @@ header a {
 
 .link_container {
     background: whitesmoke;
-    box-shadow: 5px 5px 2px slategray;
+    box-shadow: 0px 0px 5px slategray;
 }
 
 .link_tile{
