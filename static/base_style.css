@@ -17,51 +17,29 @@ header {
     margin: 0;
 }
 
-nav ul{
-    font-size: 25px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-}
-#navlogoa {
-    display: flex;
-    align-items: center;
-    font-weight: 100;
-    font-size: 40px;
-    font-family: "Blackout Midnight";
-}
-nav ul li {
-    padding-left: 35px;
-    padding-right: 0;
-}
-
-#navlogo{
-    width: 64px;
-    height: 64px;
-    margin-right: 0.5rem;
-}
-.navcontainer{
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 80px;
-    padding-right: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    
-    height: 100%;
-}
-.std_nav {
-    margin: 0;
-    height: 5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+nav {
+    float: right;
+    height: 60px;
+    line-height: 50px;
+    text-align: left;
     background-color: black;
     color: snow;
+    width: 100%;
 }
-.navdiv {
-    margin: 0;
+
+nav ul{
+    font-size: 20px;
+    list-style-type: none;
+}
+nav ul li {
+    padding-left: 0;
+    padding-right: 3em;
+    float: left;
+}
+#navspan {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
 }
 
 .link_container{

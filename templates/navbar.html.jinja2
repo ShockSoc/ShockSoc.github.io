@@ -4,13 +4,10 @@
 ('events.html','Events')
 ]
 %}
-<nav class="std_nav">
-  <div class="navcontainer">
-    <a id="navlogoa" href="www.shocksoc.org"><img src="static/logo_new_inv.png" alt="ShockSoc Logo" id="navlogo"/>ShockSoc</a>
-      <ul>
-	{% for item in navigation %}
-	  <li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
-	{% endfor %}
-      </ul>
-  </div>
+<nav id="std_nav">
+  <span id="navspan"><ul>
+    {% for item in navigation %}
+      <li><a href="{{ item[0] }}">{{ item[1] }}</a></li>
+    {% endfor %}
+  </ul></span>
 </nav>

@@ -15,7 +15,7 @@ def top_URLs_generator():
             yield "routes.render_top_page", {"page": page}
 
 
-#@freezer.register_generator
+@freezer.register_generator
 def project_URLs_generator():
     listOfFiles = os.listdir("templates/pages/projects")
     pattern = "*.html.jinja2"

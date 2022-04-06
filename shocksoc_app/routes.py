@@ -23,16 +23,6 @@ blueprint.jinja_loader = jinja2.ChoiceLoader(
     ]
 )
 
-@blueprint.route("/static/fonts.css")
-def render_fonts_css():
-    from shocksoc_app.app import get_fonts
-    from flask import Response
-    """Generate fonts CSS.
-    Returns:
-        str: CSS
-    """
-    css = render_template(f"fonts.css.jinja2", fonts = get_fonts("static/fonts/"))
-    return Response(css, mimetype='text/css')
 
 @blueprint.route("/<string:page>.html")
 def render_top_page(page: str):
@@ -54,7 +44,7 @@ def render_project_page(page: str):
     Returns:
         str: HTML
     """
-    return render_template(f"pages/project.html.jinja2")
+    return render_template(f"pages/projects/{page}.html.jinja2")
 
 
 @blueprint.route("/")
@@ -64,11 +54,3 @@ def index():
         str: Full HTML page
     """
     return render_top_page("index")
-
-@blueprint.route("/past_events_<int:page>.html")
-def render_events():
-    """Handles serving past events
-    Returns:
-        str: Full HTML page
-    """
-    return render_template(f"pages/past_events.html.jinja2")
