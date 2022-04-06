@@ -4,7 +4,7 @@
 {% block title %}Events{% endblock %}
 {% block body %}
   
-  <div class="link_container">
+  <div class="event_container">
     {% for event in ev_dict %}
       {{ boxes.event(event.name, event.description, event.image, event.form, event.location, event.date, event.start_time, event.end_time) }}
       {% endfor %}
