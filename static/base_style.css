@@ -6,6 +6,7 @@ body {
     display: grid;
     min-height: 100vh; 
     grid-template-rows: auto 1fr auto;
+    z-index: -2;
 }
 header {
     display: inline-block;
@@ -106,6 +107,7 @@ nav ul li {
 }
 .std_nav {
     margin: 0;
+    position: relative;
     height: 5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -119,18 +121,35 @@ nav ul li {
     margin: auto;
     text-align: center;
     display: flex;
-    grid-template-columns: 25% 25% 25%;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     min-height: 50%;
     width: 80%;
     text-decoration: none;
-    z-index: 0;
 }
+
+.event_container{
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 50%;
+    width: 80%;
+    text-decoration: none;
+}
+
 .link_container a {
     text-decoration: none;
 }
+
+
+.event_container a {
+    text-decoration: none;
+}
+
 .link_tile{
     width: 300px;
     height: 300px;
@@ -142,7 +161,6 @@ nav ul li {
     transition: 0.5s;
     text-decoration: none;
     position: relative;
-    
 }
 
 .link_image {
@@ -178,7 +196,7 @@ nav ul li {
     text-decoration: underline;
 }
 
-.eventbox p, h2 {
+.eventbox p, .eventbox h2 {
     max-width: 90%;
 }
 
