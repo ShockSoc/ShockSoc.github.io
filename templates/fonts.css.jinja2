@@ -1,0 +1,6 @@
+{% for font in fonts %}
+@font-face {
+  font-family: '{{font.name}}';
+  src: url('{{font.source}}');
+}
+{% endfor %}
