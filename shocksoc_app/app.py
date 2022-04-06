@@ -2,7 +2,9 @@ import flask
 import json
 from datetime import datetime
 from os import path
+import os
 import shocksoc_app.routes
+import shocksoc_app.markdown
 
 app = flask.Flask(__name__, static_folder=None, template_folder=None)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
