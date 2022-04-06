@@ -37,3 +37,35 @@ def inject_events():
 def inject_main_links():
     #print( dict(main_links_dict = main_links["links"]))
     return dict(main_links_dict = main_links["links"])
+
+@app.context_processor
+def inject_about():
+    try:
+        markdown = shocksoc_app.markdown.render_markdown("markdown/home_about.md")
+        home_html = markdown['html']
+    except:
+        home_html = ""
+    try:
+        markdown = shocksoc_app.markdown.render_markdown("markdown/about.md")
+        about_html = markdown['html']
+    except:
+         about_html = "ShockSoc York.<br> <em>The</em> University Of York Engineering Society."
+        
+    return dict(about = about_html, home_about = home_html)
+
+@app.context_processor
+def inject_basic_about():
+    try:
+        markdown = shocksoc_app.markdown.render_markdown("markdown/about.md")
+        html = markdown['html']
+    except:
+        html = "ShockSoc York.<br> <em>The</em> University Of York Engineering Society."
+    return dict(about_us = html)
+
+def get_fonts(dirname:str) -> list:
+    fonts=[]
+    for file in os.listdir(dirname):
+        filename = os.fsdecode(file)
+        if filename.endswith(".ttf") or filename.endswith(".otf"):
+           fonts.append(dict(source = f"fonts/{filename}", name=filename.split(".")[0]))
+    return fonts
