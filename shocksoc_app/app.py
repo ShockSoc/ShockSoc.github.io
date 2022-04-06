@@ -2,7 +2,9 @@ import flask
 import json
 from datetime import datetime
 from os import path
+import os
 import shocksoc_app.routes
+import shocksoc_app.markdown
 
 app = flask.Flask(__name__, static_folder=None, template_folder=None)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
@@ -37,3 +39,11 @@ def inject_events():
 def inject_main_links():
     #print( dict(main_links_dict = main_links["links"]))
     return dict(main_links_dict = main_links["links"])
+
+def get_fonts(dirname:str) -> list:
+    fonts=[]
+    for file in os.listdir(dirname):
+        filename = os.fsdecode(file)
+        if filename.endswith(".ttf") or filename.endswith(".otf"):
+           fonts.append(dict(source = f"fonts/{filename}", name=filename.split(".")[0]))
+    return fonts
