@@ -126,6 +126,7 @@ nav ul li {
     min-height: 50%;
     width: 80%;
     text-decoration: none;
+    z-index: -1;
 }
 .link_container a {
     text-decoration: none;
