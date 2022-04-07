@@ -12,7 +12,7 @@ blueprint = Blueprint(
     "routes",
     __name__,
     static_folder=path.join(ROOT_DIR, "static"),
-    static_url_path="/static",
+    static_url_path="/static/",
 )
 
 
