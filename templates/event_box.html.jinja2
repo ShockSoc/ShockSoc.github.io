@@ -1,5 +1,5 @@
 {% macro event(title, content, image_url, form_url, where, date, start, end) -%}
-  <div class="eventbox">
+  <div class="eventbox" id="{{title}}">
     <h2>{{title}}</h2>
     <p>{{content}}
     {% if form_url != '' %}
