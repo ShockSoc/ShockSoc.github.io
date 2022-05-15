@@ -1,0 +1,102 @@
+
+@font-face {
+  font-family: 'Raleway-ExtraLight';
+  src: url('fonts/Raleway-ExtraLight.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ostrich-sans-regular';
+  src: url('fonts/ostrich-sans-regular.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ostrich-sans-bold';
+  src: url('fonts/ostrich-sans-bold.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LeagueMono-CondensedThin';
+  src: url('fonts/LeagueMono-CondensedThin.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url('fonts/Raleway-Regular.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway-Light';
+  src: url('fonts/Raleway-Light.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway-Medium';
+  src: url('fonts/Raleway-Medium.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChunkFive-Regular';
+  src: url('fonts/ChunkFive-Regular.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron Light';
+  src: url('fonts/Orbitron Light.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ostrich-sans-inline-regular';
+  src: url('fonts/ostrich-sans-inline-regular.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron Medium';
+  src: url('fonts/Orbitron Medium.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chunk Five Print';
+  src: url('fonts/Chunk Five Print.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LeagueMono-Condensed';
+  src: url('fonts/LeagueMono-Condensed.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ostrich-sans-light';
+  src: url('fonts/ostrich-sans-light.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blackout Sunrise';
+  src: url('fonts/Blackout Sunrise.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blackout 2 AM';
+  src: url('fonts/Blackout 2 AM.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blackout Midnight';
+  src: url('fonts/Blackout Midnight.ttf');
+  font-display: swap;
+}

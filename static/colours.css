@@ -1,0 +1,47 @@
+body {
+    background-color: whitesmoke;
+}
+
+header a {
+    color: snow;
+    text-decoration: none;
+}
+
+.std_nav {
+    background-color: black;
+    color: snow;
+    box-shadow: 0px 0px 1rem darkslategray;
+}
+
+.link_container {
+    background: whitesmoke;
+}
+
+.link_tile{
+    background-color: lightgray;
+    color: black;
+    border-color: black;
+    box-shadow:  5px 5px 2px darkslategray;
+}
+
+.link_tile:hover{
+    background-color: whitesmoke;
+    color: whitesmoke;
+}
+
+.link_name{
+    background-color: black;
+    color: lightgray;
+}
+
+.eventbox{
+    color: black;
+    background-color: lightgray;
+    border-color:  black;
+    box-shadow: 5px 5px 2px  darkslategray;
+}
+
+.eventloc{
+    background-color: black;
+    color: lightgray;
+}
