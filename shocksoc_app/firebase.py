@@ -36,7 +36,7 @@ def get_events(idToken: str) -> str:
         events["events"].append({
             "name": events_response[event]["title"],
             "description": events_response[event]["description"],
-            "date": events_response[event]["date"],
+            "date": ("Every " if events_response[event]["recurring"] else "") + events_response[event]["date"],
             "start_time": events_response[event]["start"],
             "end_time": events_response[event]["end"],
             "location": events_response[event]["room"],
