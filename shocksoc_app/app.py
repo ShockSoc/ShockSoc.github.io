@@ -3,6 +3,7 @@ import json
 from datetime import datetime
 from os import path
 import os
+import shocksoc_app.firebase
 import shocksoc_app.routes
 import shocksoc_app.markdown
 
@@ -15,9 +16,6 @@ app.register_blueprint(blueprint)
 
 app.config["FREEZER_DESTINATION"] = path.join(ROOT_DIR, "build")
 app.config.setdefault("FREEZER_BASE_URL", "http://www.shocksoc.org")
-with open("events_list.json", 'r') as f:
-    events_json_b = f.read()
-    events = json.loads(events_json_b)
 
 with open("links_list.json", 'r') as f:
     links_json_b = f.read()
@@ -33,6 +31,8 @@ def inject_date():
 @app.context_processor
 def inject_events():
     #print( dict(ev_dict = events["events"]))
+    idToken = shocksoc_app.firebase.authenticate()
+    events = shocksoc_app.firebase.get_events(idToken=idToken)
     return dict(ev_dict = events["events"])
 
 @app.context_processor
