@@ -13,3 +13,6 @@ jobs:
       - run: ./deploy.sh
         env:
               ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+              FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+              FIREBASE_EMAIL: ${{ secrets.FIREBASE_EMAIL }}
+              FIREBASE_PWD: ${{ secrets.FIREBASE_PWD }}
