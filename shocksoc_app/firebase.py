@@ -21,11 +21,9 @@ def authenticate() -> str:
 
 def get_events(idToken: str) -> str:
     '''Retrieves scheduled events from the database.'''
-    database_url = "https://eventsplannerapp-16769-default-rtdb.europe-west1.firebasedatabase.app/events.json"
-    data = {}
-    data["auth"] = idToken
+    database_url = "https://eventsplannerapp-16769-default-rtdb.europe-west1.firebasedatabase.app/events.json?auth={}".format(idToken)
 
-    events_request = requests.get(url=database_url, json=data)
+    events_request = requests.get(url=database_url)
     events_response = events_request.json()
 
     # Remove placeholder event
